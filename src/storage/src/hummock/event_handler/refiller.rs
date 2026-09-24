@@ -767,6 +767,7 @@ impl CacheRefiller {
     }
 
     /// Replaces the complete policy snapshot applicable to this worker.
+    #[cfg(test)]
     pub(crate) fn replace_table_cache_refill_policies(
         &mut self,
         policies: HashMap<TableId, CacheRefillPolicy>,
